@@ -1,6 +1,6 @@
 # Searchspring Technical Challenge
 
-App to access and display data from Searchspring API created using React as suggested
+App to access and display data from Searchspring API created using React
 
 ## Technologies
 Project created with:

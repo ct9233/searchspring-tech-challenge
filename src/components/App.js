@@ -6,7 +6,7 @@ import Product from './Product';
 import Search from './Search';
 import { initialState, reducer } from '../store/reducer';
 
-const SEARCHSPRING_API_URL = `https://scmq7n.a.searchspring.io/api/search/search.json?resultsFormat=native&siteId=scmq7n`;
+const SEARCHSPRING_API_URL = "https://scmq7n.a.searchspring.io/api/search/search.json?resultsFormat=native&siteId=scmq7n";
 
 const App = () => {
 	const [state, dispatch] = useReducer(reducer, initialState);
@@ -37,15 +37,13 @@ const App = () => {
 			currentSearch: searchValue,
 		});
 
-		let search_request_url = `https://scmq7n.a.searchspring.io/api/search/search.json?q=${searchValue}&resultsFormat=native&siteId=scmq7n`;
+		let search_request_url = SEARCHSPRING_API_URL + `&q=${searchValue}`;
 		
 		call_api(search_request_url);
 	};
 
 	const handlePageChange = (selectedObject) => {
-		let page_change_url = `https://scmq7n.a.searchspring.io/api/search/search.json?q=${currentSearch}&resultsFormat=native&page=${
-			selectedObject.selected + 1
-		}&siteId=scmq7n`;
+		let page_change_url = SEARCHSPRING_API_URL + `&q=${currentSearch}&page=${selectedObject.selected + 1}`;
 
 		call_api(page_change_url);
 	};

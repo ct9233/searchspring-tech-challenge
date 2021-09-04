@@ -164,6 +164,7 @@ input[type=submit]:active {
 .msrp {
 	margin-right: 12px;
 	text-decoration: line-through;
+	color: #999;
 }
 
 .price {
